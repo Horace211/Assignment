@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour {
 
-    public float speed = 20f;
+    float speed = 0.5f;
     // Use this for initialization
     void Start () {
 		
@@ -15,13 +15,13 @@ public class Move : MonoBehaviour {
     {
         Vector3 pos = transform.position;
 
-        if (Input.GetKey("w"))
+        if (Input.GetKey(KeyCode.W))
         {
-            pos.y += speed * Time.deltaTime;
+            pos.y += speed;
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey(KeyCode.S))
         {
-            pos.y -= speed * Time.deltaTime;
+            pos.y -= speed;
         }
 
 
